@@ -7,8 +7,11 @@ RUN yum clean all; \
     yum install -y yum-plugin-ovl && \
     yum update -y && \
     yum install -y \
+      binutils-devel elfutils-devel elfutils-libelf-devel elfutils-* libcurl-devel zlib-devel \
       cmake \
       git \
+      glibc-devel.i686 glibc-devel \
+      libstdc++-devel.i686 \
       python && yum clean all
 
 RUN cd /root && \
